@@ -3,6 +3,7 @@ import { images } from "../constants";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const navItemsInfo = [
 	{
@@ -89,7 +90,9 @@ const Header = () => {
 		<section className="sticky left-0 top-0 right-0 z-50 bg-white">
 			<header className="flex justify-between px-5 py-5 items-center">
 				<div>
-					<img src={images.Logo} alt="logo" className="w-16" />
+					<Link to="/">
+						<img src={images.Logo} alt="logo" className="w-16" />
+					</Link>
 				</div>
 				<div className="z-40 lg:hidden">
 					{navIsOpen ? (
