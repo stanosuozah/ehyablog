@@ -12,6 +12,7 @@ const navItemsInfo = [
 	{
 		name: "Articles",
 		type: "link",
+		link: "blog/1",
 	},
 	{
 		name: "Pages",
@@ -38,7 +39,10 @@ const NavItem = ({ item }) => {
 		<li className="relative group">
 			{item.type === "link" ? (
 				<>
-					<a className="py-2 cursor-pointer font-bold font-sans px-4">
+					<a
+						href={item.link}
+						className="py-2 cursor-pointer font-bold font-sans px-4"
+					>
 						{item.name}
 					</a>
 					<span className="group-hover:right-[92%] group-hover:opacity-100 opacity-0 font-bold transition-all duration-500 absolute">
